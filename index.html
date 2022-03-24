@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <!-- logo -->
+      <img src="images/logo.svg" alt="logo" class="logo" />
+      <section class="section__container">
+        <!-- Calculation Process container -->
+        <div class="calculation__process">
+          <div class="Input__control">
+            <small></small>
+            <label for="bill">Bill</label>
+            <input type="number" id="bill" placeholder="0" />
+          </div>
+          <label for="">Select Tip %</label>
+          <div class="grid__container">
+            <button class="btn">5%</button>
+            <button class="btn">10%</button>
+            <button class="btn">15%</button>
+            <button class="btn">25%</button>
+            <button class="btn">50%</button>
+            <div class="Input__control">
+              <small class="customSmall"></small>
+              <input type="number" id="custom" placeholder="Custom" />
+            </div>
+          </div>
+          <div class="Input__control">
+            <small></small>
+            <label for="number__of__people">Number of People</label>
+            <input type="number" id="number__of__people" placeholder="0" />
+          </div>
+        </div>
+        <!-- Result container -->
+        <div class="result__container">
+          <div class="result">
+            <div class="heading">
+              <h1>Tip Amount</h1>
+              <p>/person</p>
+            </div>
+            <div class="value">
+              <h1>$<span id="tip">0.00</span></h1>
+            </div>
+          </div>
+          <div class="result">
+            <div class="heading">
+              <h1>Total</h1>
+              <p>/person</p>
+            </div>
+            <div class="value">
+              <h1>$<span id="totalVal">0.00</span></h1>
+            </div>
+          </div>
+          <button id="reset" class="reset" type="reset" disabled>reset</button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
