@@ -8,17 +8,20 @@
     <title>Tip calculator app</title>
   </head>
   <body>
+    <!-- Main -->
     <main>
       <!-- logo -->
       <img src="images/logo.svg" alt="logo" class="logo" />
       <section class="section__container">
         <!-- Calculation Process container -->
         <div class="calculation__process">
+          <!-- Bill input -->
           <div class="Input__control">
             <small></small>
             <label for="bill">Bill</label>
             <input type="number" min="0" id="bill" placeholder="0" />
           </div>
+          <!-- Tip Percentage -->
           <label>Select Tip %</label>
           <div class="grid__container">
             <button class="btn">5%</button>
@@ -31,6 +34,7 @@
               <input type="number" min="0" id="custom" placeholder="Custom" />
             </div>
           </div>
+          <!-- Number of people input -->
           <div class="Input__control">
             <small></small>
             <label for="number__of__people">Number of People</label>
@@ -44,6 +48,7 @@
         </div>
         <!-- Result container -->
         <div class="result__container">
+          <!-- Tip Result -->
           <div class="result">
             <div class="heading">
               <h1>Tip Amount</h1>
@@ -53,6 +58,7 @@
               <h1>$<span id="tip">0.00</span></h1>
             </div>
           </div>
+          <!-- Total by person result -->
           <div class="result">
             <div class="heading">
               <h1>Total</h1>
