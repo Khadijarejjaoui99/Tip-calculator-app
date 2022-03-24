@@ -105,7 +105,7 @@ input:focus {
   color: #fff;
 }
 .value {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: hsl(172, 67%, 45%);
 }
 .heading > p {
@@ -152,6 +152,7 @@ small {
   }
   .customSmall {
     top: -95px;
+    left:-50px ;
   }
 }
 @media (min-width: 1024px) {
@@ -174,5 +175,8 @@ small {
   }
   .reset {
     margin-top: 6rem;
+  }
+  .value {
+    font-size: 1.5rem;
   }
 }

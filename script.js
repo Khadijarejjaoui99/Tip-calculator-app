@@ -15,7 +15,8 @@ let numberOfPeopleBoolean = false;
 
 //Bill
 
-bill.addEventListener("input", () => {
+bill.addEventListener("input", (e) => {
+  e.target.value = e.target.value.slice(0, 8);
   if (bill.value.trim() === "") {
     setError(bill, "Can't be blank");
     billBoolean = false;
@@ -54,11 +55,11 @@ custom.addEventListener("focus", () => {
     item.style.backgroundColor = "hsl(183, 100%, 15%)";
   });
 });
-custom.addEventListener("input", () => {
+custom.addEventListener("input", (e) => {
   if (custom.value.trim() === "") {
     percentage = 0;
   } else if (parseFloat(custom.value.trim()) === 0) {
-    setError(custom, "Can't be zero");
+    setError(custom, "Custom can't be zero");
     percentage = 0;
   } else if (parseFloat(custom.value.trim()) <= -1) {
     setError(custom, "Can't be negative");
@@ -75,7 +76,7 @@ custom.addEventListener("input", () => {
 
 //Number of People
 
-peopleNumber.addEventListener("input", () => {
+peopleNumber.addEventListener("input", (e) => {
   if (peopleNumber.value.trim() === "") {
     setError(peopleNumber, "Can't be blank");
     numberOfPeopleBoolean = false;
