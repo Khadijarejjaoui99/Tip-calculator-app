@@ -132,7 +132,7 @@ small {
   visibility: hidden;
 }
 .customSmall {
-  top: -95px;
+  top: -156px;
 }
 .Input__control.error small {
   visibility: visible;
@@ -149,8 +149,11 @@ small {
     min-width: 40rem;
     max-width: 40rem;
   }
+  .customSmall {
+    top: -95px;
+  }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .logo {
     margin-top: -4rem;
     margin-bottom: 1rem;
