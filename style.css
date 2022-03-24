@@ -40,6 +40,11 @@ input {
   background-color: hsl(189, 41%, 97%);
   color: hsl(183, 100%, 15%);
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 #bill {
   background: hsl(189, 41%, 97%) url(images/icon-dollar.svg) no-repeat;
   background-position: 20px 17px;
