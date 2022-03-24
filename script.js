@@ -26,7 +26,7 @@ bill.addEventListener("input", () => {
     setError(bill, "Can't be negative");
     billBoolean = false;
   } else {
-    setSuccess(bill);
+    removeErrors(bill);
     billValue = parseFloat(bill.value.trim());
     billBoolean = true;
   }
@@ -67,7 +67,7 @@ custom.addEventListener("input", () => {
     setError(custom, "Can't be more than 100");
     percentage = 0;
   } else {
-    setSuccess(custom);
+    removeErrors(custom);
     percentage = parseFloat(custom.value.trim());
   }
   calc();
@@ -86,7 +86,7 @@ peopleNumber.addEventListener("input", () => {
     setError(peopleNumber, "Can't be negative");
     numberOfPeopleBoolean = false;
   } else {
-    setSuccess(peopleNumber);
+    removeErrors(peopleNumber);
     numberOfPeople = parseFloat(peopleNumber.value.trim());
     numberOfPeopleBoolean = true;
   }
@@ -121,6 +121,9 @@ reset.addEventListener("click", () => {
     item.style.backgroundColor = "hsl(183, 100%, 15%)";
   });
   reset.disabled = true;
+  removeErrors(bill);
+  removeErrors(custom);
+  removeErrors(peopleNumber);
 });
 
 //Error handling functions
@@ -132,7 +135,7 @@ const setError = (input, message) => {
   control.className = "Input__control error";
 };
 
-const setSuccess = (input) => {
+const removeErrors = (input) => {
   const control = input.parentElement;
   const small = control.querySelector("small");
   small.innerText = "";
