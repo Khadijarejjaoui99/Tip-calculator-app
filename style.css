@@ -133,7 +133,8 @@ small {
   visibility: hidden;
 }
 .customSmall {
-  top: -156px;
+  top: -140px;
+  left: -40px;
 }
 .Input__control.error small {
   visibility: visible;
@@ -152,7 +153,7 @@ small {
   }
   .customSmall {
     top: -95px;
-    left:-50px ;
+    left: -50px;
   }
 }
 @media (min-width: 1024px) {
