@@ -41,7 +41,7 @@ btn.forEach((item, index) => {
     btn.forEach((item) => {
       item.style.backgroundColor = "hsl(183, 100%, 15%)";
     });
-    percentage = parseInt(item.innerHTML.slice(0, item.innerHTML.length - 1));
+    percentage = parseInt(item.innerHTML);
     item.style.backgroundColor = "hsl(172, 67%, 45%)";
     custom.value = "";
     calc();
