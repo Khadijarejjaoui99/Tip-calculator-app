@@ -16,12 +16,13 @@ let numberOfPeopleBoolean = false;
 //Bill
 
 bill.addEventListener("input", (e) => {
-  const num = e.target.value;
-  const indexOfDot = num.indexOf(".");
+  const val = e.target.value.trim();
+  const indexOfDot = val.indexOf(".");
+
   if (indexOfDot === -1) {
-    e.target.value = num.slice(0, 7);
+    e.target.value = val.slice(0, 7);
   } else {
-    e.target.value = num.slice(0, indexOfDot + 3);
+    e.target.value = val.slice(0, indexOfDot + 3);
   }
 
   if (bill.value.trim() === "") {
@@ -33,6 +34,10 @@ bill.addEventListener("input", (e) => {
   } else if (parseFloat(bill.value.trim()) <= -1) {
     setError(bill, "Can't be negative");
     billBoolean = false;
+  } else if (isNaN(Number(bill.value.trim()))) {
+    setError(bill, "Plese Enter a number");
+    billBoolean = false;
+    e.target.value = "";
   } else {
     removeErrors(bill);
     billValue = parseFloat(bill.value.trim());
@@ -84,6 +89,8 @@ custom.addEventListener("input", (e) => {
 //Number of People
 
 peopleNumber.addEventListener("input", (e) => {
+  const num = e.target.value;
+  e.target.value = num.slice(0, 6);
   if (peopleNumber.value.trim() === "") {
     setError(peopleNumber, "Can't be blank");
     numberOfPeopleBoolean = false;
